@@ -1,6 +1,6 @@
 {
   "name": "j-resize",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a jQuery plugin for resize div",
   "main": "src/js/j-resize.js",
   "scripts": {
