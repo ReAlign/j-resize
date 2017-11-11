@@ -7,9 +7,11 @@
     jr.fn.jResize = function(options) {
         var defaults = {
             minW: 100,
-            minH: 100,
             maxW: 300,
-            maxH: 300
+            minH: 100,
+            maxH: 300,
+            noX: false,
+            noY: false
         };
         var opts = jr.extend(defaults, options);
 
@@ -23,14 +25,20 @@
                     var e = e || event;
                     var _x = e.pageX - x;
                     var _y = e.pageY - y;
-                    _x = _x < opts.minW ? opts.minW: _x;
-                    _x = _x > opts.maxW ? opts.maxW: _x;
-                    _y = _y < opts.minH ? opts.minH: _y;
-                    _y = _y > opts.maxH ? opts.maxH: _y;
-                    obj.parent().css({
-                        width: _x,
-                        height: _y
-                    });
+                    var _obj = {};
+
+                    if(!opts.noX) {
+                        _x = _x < opts.minW ? opts.minW: _x;
+                        _x = _x > opts.maxW ? opts.maxW: _x;
+                        _obj.width = _x;
+                    }
+
+                    if(!opts.noY) {
+                        _y = _y < opts.minH ? opts.minH: _y;
+                        _y = _y > opts.maxH ? opts.maxH: _y;
+                        _obj.height = _y;
+                    }
+                    obj.parent().css(_obj);
                 }).mouseup(function() {
                     $(this).unbind("mousemove");
                 });
