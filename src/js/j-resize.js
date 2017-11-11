@@ -5,13 +5,15 @@
 */
 (function(jr) {
     jr.fn.jResize = function(options) {
+        var _noop = function() {};
         var defaults = {
             minW: 100,
             maxW: 300,
             minH: 100,
             maxH: 300,
             noX: false,
-            noY: false
+            noY: false,
+            callback: _noop
         };
         var opts = jr.extend(defaults, options);
 
@@ -38,7 +40,10 @@
                         _y = _y > opts.maxH ? opts.maxH: _y;
                         _obj.height = _y;
                     }
+
                     obj.parent().css(_obj);
+
+                    opts.callback(_obj);
                 }).mouseup(function() {
                     $(this).unbind("mousemove");
                 });

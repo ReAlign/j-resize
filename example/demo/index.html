@@ -22,8 +22,10 @@
                 minH: 150,
                 maxW: 500,
                 maxH: 500,
-                noX: true,
-                noY: true
+                noY: true,
+                callback: function(obj) {
+                    console.dir(obj);
+                }
             });
         })
     </script>
