@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    border: 1px solid #eee;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+.drag {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 2px;
+    height: 100%;
+    cursor: col-resize;
+    background: rgba(255, 0, 0, .5);
+}
+
+.drag:hover {
+    background: rgba(255, 0, 0, 1);
+}

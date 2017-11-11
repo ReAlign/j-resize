@@ -1,0 +1,23 @@
+{
+  "name": "j-resize",
+  "version": "0.1.0",
+  "description": "a jQuery plugin for resize div",
+  "main": "src/js/j-resize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReAlign/j-resize.git"
+  },
+  "keywords": [
+    "jquery",
+    "resize"
+  ],
+  "author": "ReAlign",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReAlign/j-resize/issues"
+  },
+  "homepage": "https://github.com/ReAlign/j-resize#readme"
+}

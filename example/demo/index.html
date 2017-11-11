@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="box">左右拖动试试
+        <span class="drag"></span>
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./../../src/js/j-resize.js"></script>
+    <script>
+        $(function () {
+            $(".drag").jResize({
+                minW: 150,
+                minH: 150,
+                maxW: 500,
+                maxH: 500,
+            });
+        })
+    </script>
+</body>
+
+</html>
