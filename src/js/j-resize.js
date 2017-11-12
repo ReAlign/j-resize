@@ -1,5 +1,5 @@
 /**
-*   name:   j-resize 0.1.0
+*   name:   j-resize 1.0.0
 *   author: ReAlign
 *   date:   2017-11-11
 */
@@ -27,7 +27,10 @@
                     var e = e || event;
                     var _x = e.pageX - x;
                     var _y = e.pageY - y;
-                    var _obj = {};
+                    var _obj = {
+                        width: null,
+                        height: null
+                    };
 
                     if(!opts.noX) {
                         _x = _x < opts.minW ? opts.minW: _x;
